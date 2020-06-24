@@ -1,0 +1,119 @@
+A Next Level, uma moderna e conceituada universidade, necessita de um sistema de gestão acadêmico.
+
+Para o projeto piloto de implantação do sistema, você deve criar um programa que permita calcular a média semestral dos alunos.
+
+A média semestral é a média aritmética simples das médias bimestrais. 
+As médias bimestrais são compostas pelas seguintes atividades: prova (peso 3), projeto (peso 3), lista de exercícios (2) e contribuição em projetos de software livre/ conclusão de MOOCs recomendados pelo docente (3).
+
+Os dados devem ser obtidos a partir de input pelo teclado e o programa deve exibir se o aluno foi aprovado ou reprovado. Considere que o aluno deve ser aprovado se obtiver nota igual ou maior que 8.
+
+Caso o aluno tenha média menor que 8, determine também a nota mínima necessária para a pontuação na prova final, de forma que o aluno garanta aprovação na disciplina. Para tal, basta subtrair do valor 10,00 o valor da média.
+
+Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto no campo ao lado para que outros desenvolvedores possam analisá-lo.
+
+
+
+Etapas do projeto:
+
+1. Definir o passo a passo de execução do programa, por meio de um rascunho; (OK)
+2. Codificar no IDE; (OK)
+3. Salvar uma cópia em texto neste bloco de notas; (OK)
+4. Criar um repositório no GitHub ("Curso-AD-Projeto1"); (OK)
+5. Criar um Git Bash no diretório do projeto;
+6. Sincronizar o diretório do projeto com o GitHub;
+7. Copia o link do repositório no GitHub e envia o trabalho.
+
+
+
+Rascunho:
+
+
+
+Nota prova B1:
+Nota projeto B1:
+Nota lista B1:
+Nota atividades B1:
+Média B1: [(Nota prova B1 * 3)+(Nota projeto B1 * 3)+(Nota lista B1 * 2)+(Nota atividades B1 * 3)]/11
+
+Nota prova B2:
+Nota projeto B2:
+Nota lista B2:
+Nota atividades B2:
+Média B2: [(Nota prova B2 * 3)+(Nota projeto B2 * 3)+(Nota lista B2 * 2)+(Nota atividades B2 * 3)]/11
+
+Nota prova B3:
+Nota projeto B3:
+Nota lista B3:
+Nota atividades B3:
+Média B3: [(Nota prova B3 * 3)+(Nota projeto B3 * 3)+(Nota lista B3 * 2)+(Nota atividades B3 * 3)]/11
+
+Média semestral: (Média B1 + Média B2 + Média B3)/3
+
+Aprovado no semestre? (Se(Média semestral >= 8;"true";"false"))
+
+Quanto falta para aprovar: (Se(Aprovado no semestre = "true";0;10-Média semestral))
+
+
+
+Instrução no IDE Eclipse:
+
+import java.util.Scanner;
+
+public class Avaliacao1PedroPapastawridis {
+
+	public static void main(String[] args) {
+		// Avaliacão 1 do curso de Análise de Dados - aluno Pedro Papastawridis
+		// Notas do primeiro bimestre
+		Scanner nota = new Scanner(System.in);
+		System.out.print("Nota da prova B1= ");
+		float b11= nota.nextFloat();		
+		System.out.print("Nota do projeto B1= ");
+		float b12 = nota.nextFloat();		
+		System.out.print("Nota da lista B1= ");
+		float b13 = nota.nextFloat();		
+		System.out.print("Nota da atividade B1= ");
+		float b14 = nota.nextFloat();		
+		float resultadomediab1 = ((b11*3)+(b12*3)+(b13*2)+(b14*3))/11f;
+		System.out.println("Média do bimestre B1= "+resultadomediab1);
+		// Notas do segundo bimestre
+		System.out.print("Nota da prova B2= ");
+		float b21= nota.nextFloat();		
+		System.out.print("Nota do projeto B2= ");
+		float b22 = nota.nextFloat();		
+		System.out.print("Nota da lista B2= ");
+		float b23 = nota.nextFloat();		
+		System.out.print("Nota da atividade B2= ");
+		float b24 = nota.nextFloat();		
+		float resultadomediab2 = ((b21*3)+(b22*3)+(b23*2)+(b24*3))/11f;
+		System.out.println("Média do bimestre B2= "+resultadomediab2);
+		// Notas do terceiro bimestre
+		System.out.print("Nota da prova B3= ");
+		float b31= nota.nextFloat();		
+		System.out.print("Nota do projeto B3= ");
+		float b32 = nota.nextFloat();		
+		System.out.print("Nota da lista B3= ");
+		float b33 = nota.nextFloat();		
+		System.out.print("Nota da atividade B3= ");
+		float b34 = nota.nextFloat();		
+		float resultadomediab3 = ((b31*3)+(b32*3)+(b33*2)+(b34*3))/11f;
+		System.out.println("Média do bimestre B1= "+resultadomediab3);
+		// Nota do semestre
+		float resultadomedias1 = (resultadomediab1+resultadomediab2+resultadomediab3)/3f;
+		System.out.println("Média do semestre= "+resultadomedias1);
+		// Verificação da situação de aprovação
+		boolean aprovacaosemestre = resultadomedias1 >= 8;
+		System.out.println("Aprovado no semestre? "+aprovacaosemestre);
+		if (resultadomedias1 >= 8) {
+			System.out.println("Pontuação que falta para aprovação= 0");
+		} else {
+			System.out.println("Pontuação que falta para aprovação= "+(10-resultadomedias1));
+		}
+	}
+
+}
+
+
+
+Repositório no GitHub: https://github.com/ppapastawridis/Curso-AD-Projeto1.git
+
+
